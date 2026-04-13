@@ -1,0 +1,693 @@
+fileFormatVersion: 2
+guid: e0866ff02e00442489397b11c800bd01
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: 5922698416057289799
+    second: JUMPING AND FALLING SPRITESHEETS_0
+  - first:
+      213: -7720863182973108155
+    second: JUMPING AND FALLING SPRITESHEETS_1
+  - first:
+      213: 6749978639474559009
+    second: JUMPING AND FALLING SPRITESHEETS_2
+  - first:
+      213: 800490777181286716
+    second: JUMPING AND FALLING SPRITESHEETS_3
+  - first:
+      213: 4199870484537283136
+    second: JUMPING AND FALLING SPRITESHEETS_4
+  - first:
+      213: 131746129237549621
+    second: JUMPING AND FALLING SPRITESHEETS_5
+  - first:
+      213: -793412602018335602
+    second: JUMPING AND FALLING SPRITESHEETS_6
+  - first:
+      213: -5972384622476102187
+    second: JUMPING AND FALLING SPRITESHEETS_7
+  - first:
+      213: -2459070481895118668
+    second: JUMPING AND FALLING SPRITESHEETS_8
+  - first:
+      213: 4118648011791242499
+    second: JUMPING AND FALLING SPRITESHEETS_9
+  - first:
+      213: 8770595560030389140
+    second: JUMPING AND FALLING SPRITESHEETS_10
+  - first:
+      213: 5635151402141674057
+    second: JUMPING AND FALLING SPRITESHEETS_11
+  - first:
+      213: -8074250786361569848
+    second: JUMPING AND FALLING SPRITESHEETS_12
+  - first:
+      213: -2211941314965301539
+    second: JUMPING AND FALLING SPRITESHEETS_13
+  - first:
+      213: -4508621031448986126
+    second: JUMPING AND FALLING SPRITESHEETS_14
+  - first:
+      213: 4068862792428751177
+    second: JUMPING AND FALLING SPRITESHEETS_15
+  - first:
+      213: -580055496871056070
+    second: JUMPING AND FALLING SPRITESHEETS_16
+  - first:
+      213: -4790761185715251908
+    second: JUMPING AND FALLING SPRITESHEETS_17
+  - first:
+      213: 8692674036150154736
+    second: JUMPING AND FALLING SPRITESHEETS_18
+  - first:
+      213: 2702515885050742684
+    second: JUMPING AND FALLING SPRITESHEETS_19
+  - first:
+      213: 4195227356717526738
+    second: JUMPING AND FALLING SPRITESHEETS_20
+  - first:
+      213: 7399526833924018961
+    second: JUMPING AND FALLING SPRITESHEETS_21
+  - first:
+      213: 2185728816891342746
+    second: JUMPING AND FALLING SPRITESHEETS_22
+  - first:
+      213: -1565348476133938034
+    second: JUMPING AND FALLING SPRITESHEETS_23
+  - first:
+      213: -1401337079627855236
+    second: JUMPING AND FALLING SPRITESHEETS_24
+  - first:
+      213: -6939924560967210004
+    second: JUMPING AND FALLING SPRITESHEETS_25
+  - first:
+      213: 7130829517075344061
+    second: JUMPING AND FALLING SPRITESHEETS_26
+  - first:
+      213: -6022539615856138853
+    second: JUMPING AND FALLING SPRITESHEETS_27
+  - first:
+      213: 8891419137489420759
+    second: JUMPING AND FALLING SPRITESHEETS_28
+  - first:
+      213: -4228847964505839443
+    second: JUMPING AND FALLING SPRITESHEETS_29
+  - first:
+      213: 2823662673922100486
+    second: JUMPING AND FALLING SPRITESHEETS_30
+  - first:
+      213: -8894778474688033139
+    second: JUMPING AND FALLING SPRITESHEETS_31
+  - first:
+      213: 201711775082301001
+    second: JUMPING AND FALLING SPRITESHEETS_32
+  - first:
+      213: -6497750803019495802
+    second: JUMPING AND FALLING SPRITESHEETS_33
+  - first:
+      213: -3934644653926734552
+    second: JUMPING AND FALLING SPRITESHEETS_34
+  - first:
+      213: 3049587033290935067
+    second: JUMPING AND FALLING SPRITESHEETS_35
+  - first:
+      213: -7815573849845641295
+    second: JUMPING AND FALLING SPRITESHEETS_36
+  - first:
+      213: -1059108999803213749
+    second: JUMPING AND FALLING SPRITESHEETS_37
+  - first:
+      213: 537422845687527613
+    second: JUMPING AND FALLING SPRITESHEETS_38
+  - first:
+      213: 2652015728667158814
+    second: JUMPING AND FALLING SPRITESHEETS_39
+  externalObjects: {}
+  serializedVersion: 13
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 1
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 380
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 4
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Android
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: WebGL
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: WindowsStoreApps
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: JUMPING AND FALLING SPRITESHEETS_0
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 1536
+        width: 512
+        height: 512
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 74c0dd064d6a13250800000000000000
+      internalID: 5922698416057289799
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: JUMPING AND FALLING SPRITESHEETS_1
+      rect:
+        serializedVersion: 2
+        x: 512
+        y: 1536
+        width: 512
+        height: 512
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 5400f7b87dbf9d490800000000000000
+      internalID: -7720863182973108155
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: JUMPING AND FALLING SPRITESHEETS_2
+      rect:
+        serializedVersion: 2
+        x: 1024
+        y: 1536
+        width: 512
+        height: 512
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 1280b574fcdbcad50800000000000000
+      internalID: 6749978639474559009
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: JUMPING AND FALLING SPRITESHEETS_3
+      rect:
+        serializedVersion: 2
+        x: 1536
+        y: 1536
+        width: 512
+        height: 512
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c31fdd3ee1aeb1b00800000000000000
+      internalID: 800490777181286716
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: JUMPING AND FALLING SPRITESHEETS_4
+      rect:
+        serializedVersion: 2
+        x: 2048
+        y: 1536
+        width: 512
+        height: 512
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 0421e7d24ffe84a30800000000000000
+      internalID: 4199870484537283136
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: JUMPING AND FALLING SPRITESHEETS_5
+      rect:
+        serializedVersion: 2
+        x: 2560
+        y: 1536
+        width: 512
+        height: 512
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 532acb1186e04d100800000000000000
+      internalID: 131746129237549621
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: JUMPING AND FALLING SPRITESHEETS_6
+      rect:
+        serializedVersion: 2
+        x: 3072
+        y: 1536
+        width: 512
+        height: 512
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e84f060317b3df4f0800000000000000
+      internalID: -793412602018335602
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: JUMPING AND FALLING SPRITESHEETS_7
+      rect:
+        serializedVersion: 2
+        x: 3584
+        y: 1536
+        width: 512
+        height: 512
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 5d57e4334d3dd1da0800000000000000
+      internalID: -5972384622476102187
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: JUMPING AND FALLING SPRITESHEETS_8
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 1024
+        width: 512
+        height: 512
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 4b82ef8ec60afddd0800000000000000
+      internalID: -2459070481895118668
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: JUMPING AND FALLING SPRITESHEETS_9
+      rect:
+        serializedVersion: 2
+        x: 512
+        y: 1024
+        width: 512
+        height: 512
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 3059fa19b80682930800000000000000
+      internalID: 4118648011791242499
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: JUMPING AND FALLING SPRITESHEETS_10
+      rect:
+        serializedVersion: 2
+        x: 1024
+        y: 1024
+        width: 512
+        height: 512
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 493ca38713a67b970800000000000000
+      internalID: 8770595560030389140
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: JUMPING AND FALLING SPRITESHEETS_11
+      rect:
+        serializedVersion: 2
+        x: 1536
+        y: 1024
+        width: 512
+        height: 512
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 94ae23c0854143e40800000000000000
+      internalID: 5635151402141674057
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: JUMPING AND FALLING SPRITESHEETS_13
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 0
+        width: 512
+        height: 512
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: dd69b79e71b9d41e0800000000000000
+      internalID: -2211941314965301539
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: JUMPING AND FALLING SPRITESHEETS_14
+      rect:
+        serializedVersion: 2
+        x: 512
+        y: 0
+        width: 512
+        height: 512
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 2fdb0a14f092e61c0800000000000000
+      internalID: -4508621031448986126
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: JUMPING AND FALLING SPRITESHEETS_15
+      rect:
+        serializedVersion: 2
+        x: 1024
+        y: 0
+        width: 512
+        height: 512
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 9490586e621877830800000000000000
+      internalID: 4068862792428751177
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: JUMPING AND FALLING SPRITESHEETS_16
+      rect:
+        serializedVersion: 2
+        x: 1536
+        y: 0
+        width: 512
+        height: 512
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a3decfe499a33f7f0800000000000000
+      internalID: -580055496871056070
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: JUMPING AND FALLING SPRITESHEETS_17
+      rect:
+        serializedVersion: 2
+        x: 2048
+        y: 0
+        width: 512
+        height: 512
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c3596b9851cc38db0800000000000000
+      internalID: -4790761185715251908
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: JUMPING AND FALLING SPRITESHEETS_18
+      rect:
+        serializedVersion: 2
+        x: 2560
+        y: 0
+        width: 512
+        height: 512
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 0f5bdf8eaf492a870800000000000000
+      internalID: 8692674036150154736
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    customData: 
+    physicsShape: []
+    bones: []
+    spriteID: e84f5843860b4744ca9026f8e7c20b63
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    spriteCustomMetadata:
+      entries:
+      - key: SpriteEditor.SliceSettings
+        value: '{"sliceOnImport":false,"gridCellCount":{"x":1.0,"y":1.0},"gridSpriteSize":{"x":512.0,"y":512.0},"gridSpriteOffset":{"x":0.0,"y":0.0},"gridSpritePadding":{"x":0.0,"y":0.0},"pivot":{"x":0.5,"y":0.0},"pivotPixels":{"x":0.0,"y":0.0},"autoSlicingMethod":0,"spriteAlignment":7,"pivotUnitMode":0,"slicingType":1,"keepEmptyRects":false,"isAlternate":false}'
+    nameFileIdTable:
+      JUMPING AND FALLING SPRITESHEETS_0: 5922698416057289799
+      JUMPING AND FALLING SPRITESHEETS_1: -7720863182973108155
+      JUMPING AND FALLING SPRITESHEETS_10: 8770595560030389140
+      JUMPING AND FALLING SPRITESHEETS_11: 5635151402141674057
+      JUMPING AND FALLING SPRITESHEETS_12: -8074250786361569848
+      JUMPING AND FALLING SPRITESHEETS_13: -2211941314965301539
+      JUMPING AND FALLING SPRITESHEETS_14: -4508621031448986126
+      JUMPING AND FALLING SPRITESHEETS_15: 4068862792428751177
+      JUMPING AND FALLING SPRITESHEETS_16: -580055496871056070
+      JUMPING AND FALLING SPRITESHEETS_17: -4790761185715251908
+      JUMPING AND FALLING SPRITESHEETS_18: 8692674036150154736
+      JUMPING AND FALLING SPRITESHEETS_2: 6749978639474559009
+      JUMPING AND FALLING SPRITESHEETS_3: 800490777181286716
+      JUMPING AND FALLING SPRITESHEETS_4: 4199870484537283136
+      JUMPING AND FALLING SPRITESHEETS_5: 131746129237549621
+      JUMPING AND FALLING SPRITESHEETS_6: -793412602018335602
+      JUMPING AND FALLING SPRITESHEETS_7: -5972384622476102187
+      JUMPING AND FALLING SPRITESHEETS_8: -2459070481895118668
+      JUMPING AND FALLING SPRITESHEETS_9: 4118648011791242499
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
