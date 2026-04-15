@@ -57,6 +57,12 @@ public class PlayerMovement : MonoBehaviour
 
     private void Update()
     {
+        //idle animation
+        if (Mathf.Abs(horizontal) < 0.1f && isDashing == false && )
+        {
+            anim.Play("idle anim");
+        }
+
         Jump();
         Move();
         Dash();
@@ -71,21 +77,33 @@ public class PlayerMovement : MonoBehaviour
             Flip();
         }
 
+        
+
         //walking animation
         if (!isDashing)
         {
-            anim.SetFloat("Speed", Mathf.Abs(horizontal));
+            //anim.SetFloat("Speed", Mathf.Abs(horizontal));
+
+            if(Mathf.Abs(horizontal) > 0.1f )
+            {
+                anim.Play("walking anim");
+            }
         }
 
         //dash animation
-        if (isDashing)
+        if (dashAction.IsPressed() == true)
         {
-            anim.SetFloat("Speed", 0f);
+            anim.Play("dash_anim");
         }
 
         //jumping animation
-        float verticalVelocity = rb.linearVelocity.y;
+        if (jumpAction.IsPressed() == true)
+        {
+            anim.Play("jumping anim");
+        }
 
+        //float verticalVelocity = rb.linearVelocity.y;
+        /*
         if (IsGrounded())
         {
             anim.SetBool("isJumping", false);
@@ -104,6 +122,7 @@ public class PlayerMovement : MonoBehaviour
                 anim.SetBool("isFalling", true);
             }
         }
+        */
     }
 
     private void Flip()
