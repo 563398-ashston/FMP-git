@@ -1,8 +1,7 @@
-using System.Collections;
+﻿using System.Collections;
 using UnityEngine;
 using UnityEngine.InputSystem;
-using UnityEngine.Rendering;
-using UnityEngine.XR;
+
 public class PlayerMovement : MonoBehaviour
 {
     public Rigidbody2D rb;
@@ -16,7 +15,7 @@ public class PlayerMovement : MonoBehaviour
     [Header("player values")]
     [SerializeField] float speed = 8f;
     [SerializeField] float jumpingPower = 16;
-    
+
     [Header("dashing values")]
     public float dashForce = 30f;
     public float dashTime = 0.2f;
@@ -25,26 +24,25 @@ public class PlayerMovement : MonoBehaviour
     public bool isDashing;
     private float dashTimer;
     private float cooldownTimer;
-    
-   
+
     [SerializeField] private TrailRenderer tr;
 
     InputAction moveAction;
     InputAction jumpAction;
     InputAction dashAction;
 
+    public enum PlayerAnimation
+    {
+        Idle,
+        Walking,
+        Jumping,
+        Falling,
+        Dashing
+    }
+
     private void Awake()
     {
         rb.GetComponent<Rigidbody2D>();
-    }
-
-    private void OnEnable()
-    {
-        dashAction.Enable();
-    }
-    private void OnDisable()
-    {
-        dashAction.Disable();
     }
 
     private void Start()
@@ -55,74 +53,70 @@ public class PlayerMovement : MonoBehaviour
         dashAction = InputSystem.actions.FindAction("Dash");
     }
 
+    private void OnEnable() => dashAction.Enable();
+    private void OnDisable() => dashAction.Disable();
+
     private void Update()
     {
-        //idle animation
-        if (Mathf.Abs(horizontal) < 0.1f && isDashing == false && )
-        {
-            anim.Play("idle anim");
-        }
-
         Jump();
         Move();
         Dash();
+        FlipCheck();
 
-        //flip code
-        if (isFacingRight && horizontal > 0f)
+        UpdateAnimation();
+    }
+
+    
+    void UpdateAnimation()
+    {
+        PlayerAnimation currentAnim;
+
+        if (isDashing)
         {
-            Flip();
+            currentAnim = PlayerAnimation.Dashing;
         }
-        else if (!isFacingRight && horizontal < 0f)
+        else if (!IsGrounded() && rb.linearVelocity.y > 0.1f)
         {
-            Flip();
+            currentAnim = PlayerAnimation.Jumping;
         }
-
-        
-
-        //walking animation
-        if (!isDashing)
+        else if (!IsGrounded() && rb.linearVelocity.y < -0.1f)
         {
-            //anim.SetFloat("Speed", Mathf.Abs(horizontal));
-
-            if(Mathf.Abs(horizontal) > 0.1f )
-            {
-                anim.Play("walking anim");
-            }
+            currentAnim = PlayerAnimation.Falling;
         }
-
-        //dash animation
-        if (dashAction.IsPressed() == true)
+        else if (Mathf.Abs(horizontal) > 0.1f)
         {
-            anim.Play("dash_anim");
-        }
-
-        //jumping animation
-        if (jumpAction.IsPressed() == true)
-        {
-            anim.Play("jumping anim");
-        }
-
-        //float verticalVelocity = rb.linearVelocity.y;
-        /*
-        if (IsGrounded())
-        {
-            anim.SetBool("isJumping", false);
-            anim.SetBool("isFalling", false);
+            currentAnim = PlayerAnimation.Walking;
         }
         else
         {
-            if (verticalVelocity > 0.1f)
-            {
-                anim.SetBool("isJumping", true);
-                anim.SetBool("isFalling", false);
-            }
-            else if (verticalVelocity < -0.1f)
-            {
-                anim.SetBool("isJumping", false);
-                anim.SetBool("isFalling", true);
-            }
+            currentAnim = PlayerAnimation.Idle;
         }
-        */
+
+      
+        anim.Play(GetAnimationName(currentAnim));
+    }
+
+   
+    string GetAnimationName(PlayerAnimation animType)
+    {
+        switch (animType)
+        {
+            case PlayerAnimation.Idle: return "idle_anim";
+            case PlayerAnimation.Walking: return "walking_anim";
+            case PlayerAnimation.Jumping: return "jumping_anim";
+            case PlayerAnimation.Falling: return "falling_anim";
+            case PlayerAnimation.Dashing: return "dash_anim";
+            default: return "idle anim";
+        }
+    }
+
+
+    private void FlipCheck()
+    {
+        if (isFacingRight && horizontal > 0f || !isFacingRight && horizontal < 0f)
+        {
+            Flip();
+        }
     }
 
     private void Flip()
@@ -133,19 +127,11 @@ public class PlayerMovement : MonoBehaviour
         transform.localScale = localScale;
     }
 
-    //grounded check for the jump
     private bool IsGrounded()
     {
-        bool grounded = Physics2D.OverlapCircle(groundCheck.position, 0.2f, groundLayer);
-
-        if (grounded)
-        {
-            
-        }
-        return grounded;
+        return Physics2D.OverlapCircle(groundCheck.position, 0.2f, groundLayer);
     }
-    
-    //Player movement 
+
     public void Move()
     {
         if (isDashing) return;
@@ -153,32 +139,27 @@ public class PlayerMovement : MonoBehaviour
         horizontal = moveAction.ReadValue<Vector2>().x;
         rb.linearVelocity = new Vector2(horizontal * speed, rb.linearVelocity.y);
     }
-    
+
     public void Jump()
     {
         if (jumpAction.IsPressed() && IsGrounded())
         {
-            rb.linearVelocity = new Vector2(rb.linearVelocity.x,jumpingPower);
-            
-            print("jumped");
+            rb.linearVelocity = new Vector2(rb.linearVelocity.x, jumpingPower);
         }
-        if (jumpAction.IsPressed()==false && rb.linearVelocity.y > 0f)
+
+        if (!jumpAction.IsPressed() && rb.linearVelocity.y > 0f)
         {
             rb.linearVelocity = new Vector2(rb.linearVelocity.x, rb.linearVelocity.y * 0.5f);
-            
-            print("falling");
         }
     }
 
     public void Dash()
     {
-        //Dash code
         cooldownTimer -= Time.deltaTime;
 
         if (dashAction.WasPressedThisFrame() && cooldownTimer <= 0f)
         {
             StartDash();
-            Debug.Log("dash pressed");
         }
 
         if (isDashing)
@@ -188,11 +169,7 @@ public class PlayerMovement : MonoBehaviour
             if (dashTimer <= 0f)
             {
                 isDashing = false;
-
-                anim.SetBool("isDashing", false);
-
                 rb.linearVelocity = new Vector2(0f, rb.linearVelocity.y);
-
                 tr.emitting = false;
             }
         }
@@ -204,13 +181,8 @@ public class PlayerMovement : MonoBehaviour
         dashTimer = dashTime;
         cooldownTimer = dashCooldown;
 
-        isDashing = true;
-        anim.SetBool("isDashing", true);
-
         float direction = Mathf.Sign(transform.localScale.x);
         rb.linearVelocity = new Vector2(-direction * dashForce, rb.linearVelocity.y);
         tr.emitting = true;
-
-        
     }
 }

@@ -3,6 +3,7 @@ using UnityEngine.InputSystem;
 
 public class PlayerAttack : MonoBehaviour
 {
+    /*
     public Animator animator;
     public float attackCooldown = 0.5f;
 
@@ -27,4 +28,5 @@ public class PlayerAttack : MonoBehaviour
     {
         canAttack = true;
     }
+    */
 }

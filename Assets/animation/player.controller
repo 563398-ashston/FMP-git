@@ -7,7 +7,7 @@ AnimatorState:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: walking anim
+  m_Name: walking_anim
   m_Speed: 1
   m_CycleOffset: 0
   m_Transitions: []
@@ -148,7 +148,7 @@ AnimatorState:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: falling anim
+  m_Name: falling_anim
   m_Speed: 1
   m_CycleOffset: 0
   m_Transitions: []
@@ -200,7 +200,7 @@ AnimatorState:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: idle anim
+  m_Name: idle_anim
   m_Speed: 1
   m_CycleOffset: 0
   m_Transitions: []
@@ -226,7 +226,7 @@ AnimatorState:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: jumping anim
+  m_Name: jumping_anim
   m_Speed: 1
   m_CycleOffset: 0
   m_Transitions: []
