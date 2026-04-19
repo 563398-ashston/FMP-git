@@ -1,10 +1,12 @@
+using System;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class HealthScript : MonoBehaviour
 {
     public int health;
     public int maxHealth = 100;
-    //public Slider slider;
+    public Slider slider;
 
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Awake()
@@ -17,7 +19,6 @@ public class HealthScript : MonoBehaviour
         health = maxHealth;
     }
 
-    /*
     public void Update()
     {
         if (slider != null)
@@ -27,20 +28,18 @@ public class HealthScript : MonoBehaviour
 
         }
     }
-    */
 
     public void TakeDamage(int amount)
     {
         health -= amount;
-        //slider.value = health;
+        slider.value = health;
 
         if (health <= 0)
         {
-            /*
             //reset player to resetpoint and reset health to max
             PlayerMovement pm = GetComponent<PlayerMovement>();
-            transform.position = pm.resetPoint.position;
-            */
+            //transform.position = pm.resetPoint.position;
+
         }
     }
 
