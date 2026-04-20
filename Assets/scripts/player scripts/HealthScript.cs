@@ -37,7 +37,7 @@ public class HealthScript : MonoBehaviour
         if (health <= 0)
         {
             //reset player to resetpoint and reset health to max
-            PlayerMovement pm = GetComponent<PlayerMovement>();
+            PlayerController pm = GetComponent<PlayerController>();
             //transform.position = pm.resetPoint.position;
 
         }

@@ -3,7 +3,7 @@ using UnityEngine;
 public class EnemyMove: MonoBehaviour
 {
     bool isGrounded;
-    public PlayerMovement playerScript;
+    public PlayerController playerScript;
     public LayerMask groundLayerMask;
     Animator anim;
     Rigidbody2D rb;
@@ -33,7 +33,7 @@ public class EnemyMove: MonoBehaviour
     {
         if (xvel < 0)
         {
-            print("I am moving left");
+            //print("I am moving left");
             //anim.SetBool("isWalking", true);
 
             if (ExtendedRayCollisionCheck(-1, 0) == false)
@@ -45,7 +45,7 @@ public class EnemyMove: MonoBehaviour
 
         if (xvel > 0)
         {
-            print("I am moving right");
+            //print("I am moving right");
             //anim.SetBool("isWalking", true);
 
             if (ExtendedRayCollisionCheck(1, 0) == false)
@@ -77,7 +77,7 @@ public class EnemyMove: MonoBehaviour
 
         if (hit.collider != null)
         {
-            print("player has collided with ground layer");
+            //print("player has collided with ground layer");
             hitColor = Color.green;
             hitSomething = true;
         }

@@ -1,32 +1,24 @@
+using Unity.VisualScripting;
 using UnityEngine;
 using UnityEngine.InputSystem;
 
 public class PlayerAttack : MonoBehaviour
 {
-    /*
-    public Animator animator;
-    public float attackCooldown = 0.5f;
+    public GameObject attackPoint;
+    public float radius;
+    public LayerMask enemies;
 
-    private bool canAttack = true;
-
-    public void OnAttack(InputAction.CallbackContext context)
+    private void attack()
     {
-        if (context.performed && canAttack)
+        Collider2D[] enemy = Physics2D.OverlapCircleAll(attackPoint.transform.position, radius, enemies);
+
+        foreach (Collider2D enemyGameObject in enemy)
         {
-            Attack();
+            Debug.Log("hit enemy");
         }
     }
-
-    void Attack()
+    private void OnDrawGizmos()
     {
-        canAttack = false;
-        animator.SetTrigger("Attack");
-
-        Invoke(nameof(ResetAttack), attackCooldown);
+        Gizmos.DrawWireSphere(attackPoint.transform.position, radius);
     }
-    void ResetAttack()
-    {
-        canAttack = true;
-    }
-    */
 }
