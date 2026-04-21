@@ -15,6 +15,7 @@ public class PlayerController : MonoBehaviour
     [Header("player values")]
     [SerializeField] float speed = 8f;
     [SerializeField] float jumpingPower = 16;
+    [SerializeField] float maxVertSpeed;
 
     [Header("dashing values")]
     public float dashForce = 30f;
@@ -62,6 +63,14 @@ public class PlayerController : MonoBehaviour
 
     private void OnEnable() => dashAction.Enable();
     private void OnDisable() => dashAction.Disable();
+
+    private void FixedUpdate()
+    {
+        if(rb.linearVelocity.magnitude > maxVertSpeed)
+        {
+            rb.linearVelocity = rb.linearVelocity.normalized * maxVertSpeed;
+        }
+    }
 
     private void Update()
     {

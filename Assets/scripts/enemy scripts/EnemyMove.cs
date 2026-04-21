@@ -24,8 +24,8 @@ public class EnemyMove: MonoBehaviour
     {
         groundLayerMask = LayerMask.GetMask("Ground");
         rb = GetComponent<Rigidbody2D>();
-        //anim = GetComponent<Animator>();
-        xvel = 8;
+        anim = GetComponent<Animator>();
+        xvel = 3;
     }
 
     // Update is called once per frame
@@ -34,11 +34,11 @@ public class EnemyMove: MonoBehaviour
         if (xvel < 0)
         {
             //print("I am moving left");
-            //anim.SetBool("isWalking", true);
+            anim.Play("enemy_1_walking");
 
             if (ExtendedRayCollisionCheck(-1, 0) == false)
             {
-                xvel = 8;
+                xvel = 3;
                 gameObject.transform.localScale = new Vector3(1, 1, 1);
             }
         }
@@ -50,7 +50,7 @@ public class EnemyMove: MonoBehaviour
 
             if (ExtendedRayCollisionCheck(1, 0) == false)
             {
-                xvel = -8;
+                xvel = -3;
                 gameObject.transform.localScale = new Vector3(-1, 1, 1);
             }
         }
@@ -61,11 +61,11 @@ public class EnemyMove: MonoBehaviour
 
     public bool ExtendedRayCollisionCheck(float xoffs, float yoffs)
     {
-        float rayLength = 2f; // length of raycast 
+        float rayLength = 0.5f; // length of raycast 
         bool hitSomething = false;
 
         //convert x and y offset into a Vector 3
-        Vector3 offset = new Vector3(xoffs, yoffs, 0);
+        Vector3 offset = new Vector3(xoffs, yoffs, 4);
 
         //cast a ray downwards 
         RaycastHit2D hit;
