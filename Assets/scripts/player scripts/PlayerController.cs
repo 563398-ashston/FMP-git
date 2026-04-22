@@ -15,6 +15,7 @@ public class PlayerController : MonoBehaviour
     [Header("player values")]
     [SerializeField] float speed = 8f;
     [SerializeField] float jumpingPower = 16;
+    public int jumpsLeft;
     [SerializeField] float maxVertSpeed;
 
     [Header("dashing values")]
@@ -26,15 +27,22 @@ public class PlayerController : MonoBehaviour
     private float cooldownTimer;
     private bool hasDashedInAir;
 
+    [Header("attack values")]
+    public int attackDamage = 50;
+    public float attackRange = 0.5f;
+    public float attackrate = 2f;
+    private float nextAttackTime = 0f;
+    public Transform attackPoint;
+    public LayerMask enemyLayers;
+
     private int maxJumps = 2;
-    public int jumpsLeft;
     private float originalGravity;
 
-    
-
+    //input actions
     InputAction moveAction;
     InputAction jumpAction;
     InputAction dashAction;
+    InputAction attackAction;
 
     public enum PlayerAnimation
     {
@@ -43,7 +51,8 @@ public class PlayerController : MonoBehaviour
         Jumping,
         Falling,
         Dashing,
-        DoubleJumping
+        DoubleJumping,
+        Attacking
     }
 
     private void Awake()
@@ -57,6 +66,8 @@ public class PlayerController : MonoBehaviour
         moveAction = InputSystem.actions.FindAction("Move");
         jumpAction = InputSystem.actions.FindAction("Jump");
         dashAction = InputSystem.actions.FindAction("Dash");
+        attackAction = InputSystem.actions.FindAction("Attack");
+
         jumpsLeft = maxJumps;
         originalGravity = rb.gravityScale;
     }
@@ -77,11 +88,12 @@ public class PlayerController : MonoBehaviour
         Jump();
         Move();
         Dash();
+        //Attack();
+
         FlipCheck();
         UpdateAnimation();
     }
 
-    
     void UpdateAnimation()
     {
         PlayerAnimation currentAnim;
@@ -115,7 +127,6 @@ public class PlayerController : MonoBehaviour
         anim.Play(GetAnimationName(currentAnim));
     }
 
-   
     string GetAnimationName(PlayerAnimation animType)
     {
         switch (animType)
@@ -129,7 +140,6 @@ public class PlayerController : MonoBehaviour
             default: return "idle anim";
         }
     }
-
 
     private void FlipCheck()
     {
@@ -160,6 +170,27 @@ public class PlayerController : MonoBehaviour
         rb.linearVelocity = new Vector2(horizontal * speed, rb.linearVelocity.y);
     }
 
+    public void Attack()
+    {
+        //detect the enemy
+        Collider2D[] hitEnemies = Physics2D.OverlapCircleAll(attackPoint.transform.position, attackRange, enemyLayers);
+
+        //damage the enemy
+        foreach (Collider2D enemy in hitEnemies)
+        {
+            Debug.Log("we hit " +  enemy.name);
+            enemy.GetComponent<EnemyControllerOne>().TakeDamage(attackDamage);
+        }
+    }
+
+    private void OnDrawGizmos()
+    {
+        if(attackPoint == null)
+            return;
+
+        Gizmos.DrawWireSphere(attackPoint.transform.position, attackRange);
+    }
+
     public void Jump()
     {
 
@@ -183,8 +214,6 @@ public class PlayerController : MonoBehaviour
             rb.linearVelocity = new Vector2(rb.linearVelocity.x, rb.linearVelocity.y * 0.5f);
         }
     }
-
-
 
     public void Dash()
     {
