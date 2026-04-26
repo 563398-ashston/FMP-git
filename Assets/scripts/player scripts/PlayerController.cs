@@ -28,9 +28,12 @@ public class PlayerController : MonoBehaviour
     private bool hasDashedInAir;
 
     [Header("attack values")]
+    public bool isAttacking;
     public int attackDamage = 50;
     public float attackRange = 0.5f;
     public float attackrate = 2f;
+    private float attackTimer;
+    [SerializeField] float attackDuration = 0.2f;
     private float nextAttackTime = 0f;
     public Transform attackPoint;
     public LayerMask enemyLayers;
@@ -85,10 +88,24 @@ public class PlayerController : MonoBehaviour
 
     private void Update()
     {
+        if (isAttacking)
+        {
+            attackTimer -= Time.deltaTime;
+
+            if (attackTimer <= 0f)
+            {
+                isAttacking = false;
+            }
+        }
+
         Jump();
         Move();
         Dash();
-        //Attack();
+
+        if (attackAction.WasPressedThisFrame())
+        {
+            Attack();
+        }
 
         FlipCheck();
         UpdateAnimation();
@@ -101,6 +118,10 @@ public class PlayerController : MonoBehaviour
         if (isDashing)
         {
             currentAnim = PlayerAnimation.Dashing;
+        }
+        else if (isAttacking == true)
+        {
+            currentAnim = PlayerAnimation.Attacking;
         }
         else if (!IsGrounded() && rb.linearVelocity.y > 0.1f && jumpsLeft == 0)
         {
@@ -137,6 +158,7 @@ public class PlayerController : MonoBehaviour
             case PlayerAnimation.Falling: return "falling_anim";
             case PlayerAnimation.Dashing: return "dash_anim";
             case PlayerAnimation.DoubleJumping: return "double_jump_anim";
+            case PlayerAnimation.Attacking: return "attack_anim";
             default: return "idle anim";
         }
     }
@@ -172,16 +194,19 @@ public class PlayerController : MonoBehaviour
 
     public void Attack()
     {
-        //detect the enemy
-        Collider2D[] hitEnemies = Physics2D.OverlapCircleAll(attackPoint.transform.position, attackRange, enemyLayers);
+        isAttacking = true;
+        attackTimer = attackDuration;
 
-        //damage the enemy
+        Collider2D[] hitEnemies = Physics2D.OverlapCircleAll(
+            attackPoint.position, attackRange, enemyLayers);
+
         foreach (Collider2D enemy in hitEnemies)
         {
-            Debug.Log("we hit " +  enemy.name);
+            Debug.Log("we hit " + enemy.name);
             enemy.GetComponent<EnemyControllerOne>().TakeDamage(attackDamage);
         }
     }
+
 
     private void OnDrawGizmos()
     {
@@ -269,6 +294,6 @@ public class PlayerController : MonoBehaviour
         rb.gravityScale = 0f;
         rb.linearVelocity = new Vector2(-direction * dashForce, 0f);
 
-       
+       //if (isAttacking)
     }
 }
