@@ -9,6 +9,8 @@ public class PlayerController : MonoBehaviour
     public Transform groundCheck;
     public LayerMask groundLayer;
     Animator anim;
+    private HealthScript playerHealth;
+    public Transform resetPoint;
     private bool isFacingRight = true;
     private float horizontal;
 
@@ -80,11 +82,24 @@ public class PlayerController : MonoBehaviour
 
     private void FixedUpdate()
     {
-        if(rb.linearVelocity.magnitude > maxVertSpeed)
+        if (rb.linearVelocity.magnitude > maxVertSpeed)
         {
             rb.linearVelocity = rb.linearVelocity.normalized * maxVertSpeed;
         }
     }
+
+    
+    private void OnTriggerEnter2D(Collider2D collision)
+    {
+        if (collision.gameObject.tag == "Spike")
+        {
+            collision.gameObject.GetComponent<PlayerController>().resetPoint = resetPoint;
+            //collision.gameObject.GetComponent<HealthScript>().ResetHealth();
+            //print("reset point is " + resetPoint);
+        }
+    }
+    
+
 
     private void Update()
     {
