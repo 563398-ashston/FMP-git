@@ -36,7 +36,7 @@ public class PlayerController : MonoBehaviour
     public float attackrate = 2f;
     private float attackTimer;
     [SerializeField] float attackDuration = 0.2f;
-    private float nextAttackTime = 0f;
+    //private float nextAttackTime = 0f;
     public Transform attackPoint;
     public LayerMask enemyLayers;
 
