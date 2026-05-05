@@ -1,4 +1,5 @@
 using System;
+using Unity.VisualScripting;
 using UnityEngine;
 using UnityEngine.UI;
 
@@ -33,15 +34,12 @@ public class HealthScript : MonoBehaviour
     {
         health -= amount;
         slider.value = health;
-        /*
+        
         if (health <= 0)
         {
-            //reset player to resetpoint and reset health to max
-            PlayerController pm = GetComponent<PlayerController>();
-            transform.position = pm.resetPoint.position;
-
+            Destroy(gameObject, 4f);
         }
-        */
+        
     }
 
     public void ResetHealth()

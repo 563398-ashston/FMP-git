@@ -218,8 +218,25 @@ public class PlayerController : MonoBehaviour
         foreach (Collider2D enemy in hitEnemies)
         {
             Debug.Log("we hit " + enemy.name);
+
+            DoEnemyDamage(enemy.gameObject);
+           
+        }
+    }
+
+
+    void DoEnemyDamage(GameObject enemy)
+    {
+        if (enemy.tag == "enemy1")
+        {
             enemy.GetComponent<EnemyControllerOne>().TakeDamage(attackDamage);
         }
+        if (enemy.tag == "enemy2")
+        {
+            enemy.GetComponent<EnemyControllerTwo>().TakeDamage(attackDamage);
+        }
+
+
     }
 
 

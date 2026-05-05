@@ -93,7 +93,7 @@ public class EnemyControllerOne : MonoBehaviour
             state = States.takeDamage;
             anim.Play("enemy_1_hurt");
 
-            // optional: return to move after short delay
+            //return to move after short delay
             Invoke(nameof(ReturnToMove), 0.25f);
         }
     }
